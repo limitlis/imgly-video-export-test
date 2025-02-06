@@ -10,10 +10,6 @@ const imglyLibReady = ref(false);
 const editorInitialized = ref(false);
 let _cesdk;
 const defaultConfig = {
-    core: {
-        // Specify location of core assets, required by the engine.
-        baseURL: `${baseURL}/core`
-    },
     baseURL,
     ui: {
         elements: {
@@ -43,6 +39,8 @@ const defaultConfig = {
         }
     }
 };
+
+console.log('CE loading with config:', defaultConfig );
 
 const init = async () => {
     let scriptPromise;
